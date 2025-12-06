@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Quote Saver</title>
+  <style>
+    body {
+     background: #000000;
+     color: #ffffff;
+     font-family: Arial, sans-serif;
+     max-width: 600px;
+     margin: 40px auto;
+    }
+    input {
+     width: 70%;
+     padding: 8px;
+    }
+    button {
+     padding: 8px 12px;
+     margin-left: 5px;
+     cursor: pointer;
+    }
+    li {
+     background: #b30000;
+     border-left: 4px solid #1a1a1a;
+     padding: 10px;
+     border-radius: 4px;
+     margin-bottom: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     animation: quoteIn 0.3s ease-out;
+    }
+    li:hover {
+     animation: glowPulse 0.5s infinite alternate;
+     cursor: pointer;
+     transform: scale(1.01);
+     text-shadow: 0 0 4px #b30000;
+     background: #b30000;
+     color: #ffffff;
+     box-shadow: 0 0 10px #b30000;
+     transform: scale(1.08);
+    }
+
+    li button {
+     background: transparent;
+     border: 1px solid #b30000;
+     padding: 5px 10px;
+     border-radius: 4px;
+     color: #b30000;
+     cursor: pointer;
+     transition: 0.2s;
+     font-size: 14px;
+     background: #000000;          
+     border: 1px solid #b30000;    
+     color: #ffffff;               
+     padding: 5px 10px;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: 0.25s ease;
+     font-size: 14px;
+    }
+
+
+    @keyframes quoteIn{
+        from{
+            opacity:0;
+            transform: translateY(8px);
+        }
+        to{
+            opacity:0;
+            transform: translateY(0);
+        }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mini Quote Saver</h1>
+
+  <input id="quoteInput" type="text" placeholder="Type your quote..." />
+  <button id="addBtn">Add Quote</button>
+
+  <ul id="quoteList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
